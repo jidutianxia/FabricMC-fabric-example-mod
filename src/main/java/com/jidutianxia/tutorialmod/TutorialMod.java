@@ -1,5 +1,8 @@
 package com.jidutianxia.tutorialmod;
 
+import com.jidutianxia.tutorialmod.block.ModBlocks;
+import com.jidutianxia.tutorialmod.item.ModItemGroups;
+import com.jidutianxia.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -19,6 +22,9 @@ public class TutorialMod implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
+		ModItems.registerModItems();
+		ModItemGroups.registerModItemGroups();
+		ModBlocks.registerModBlock();
 		LOGGER.info("Hello Fabric world!");
 	}
 }
